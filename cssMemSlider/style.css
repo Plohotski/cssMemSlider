@@ -119,11 +119,11 @@ h1{
 }
 
 
-#slide1:checked ~ .wrapper-controls .controls .wrapper-label-1 label,
-#slide2:checked ~ .wrapper-controls .controls .wrapper-label-2 label,
-#slide3:checked ~ .wrapper-controls .controls .wrapper-label-3 label,
-#slide4:checked ~ .wrapper-controls .controls .wrapper-label-4 label{
-	background: rgb(255, 255, 255),
+#slide1:checked ~ .wrapper-controls .controls .wrapper-label-1 div,
+#slide2:checked ~ .wrapper-controls .controls .wrapper-label-2 div,
+#slide3:checked ~ .wrapper-controls .controls .wrapper-label-3 div,
+#slide4:checked ~ .wrapper-controls .controls .wrapper-label-4 div{
+	background: rgb(255, 255, 255);
 }	
 
 .wrapper-label div {
@@ -141,8 +141,8 @@ h1{
 }
 
 .wrapper-label:hover>div {
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(0, 0, 0);
+	background-color: rgb(205, 99, 0);
+	border-color: rgb(205, 99, 0);
 }
 
 .wrapper-label {
