@@ -66,6 +66,7 @@ h1{
    background-position: center;
    background-size: contain;
 	z-index: 0;
+   font-size: 1.4em;
 	-webkit-transform: scale(1.5);
 	-moz-transform: scale(1.5);
 	-o-transform: scale(1.5);
@@ -91,6 +92,7 @@ h1{
 #slide4:checked ~ .wrapper-controls > .info > .slide4 {
 	opacity: 1;
 	z-index: 1;
+   display: block;
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-o-transform: scale(1);
@@ -102,7 +104,7 @@ h1{
 }
 
 .wrapper-controls {
-   height: 8%;
+   height: 9%;
    padding-top: 4%;
 	display: flex;
    justify-content: space-between;
@@ -116,65 +118,50 @@ h1{
    justify-content: space-around;
 }
 
-.main-wrapper label {
+
+#slide1:checked ~ .wrapper-controls .controls .wrapper-label-1 label,
+#slide2:checked ~ .wrapper-controls .controls .wrapper-label-2 label,
+#slide3:checked ~ .wrapper-controls .controls .wrapper-label-3 label,
+#slide4:checked ~ .wrapper-controls .controls .wrapper-label-4 label{
+	background: rgb(255, 255, 255),
+}	
+
+.wrapper-label div {
+	border: 0.3em solid rgb(0, 0, 0);
+	background: rgb(0, 0, 0);
 	cursor: pointer;
 	display: inline-block;
-	height: 100%;
-	margin: auto;
-	position: relative;
-	width: 100%;
-   background-color: rgb(252, 252, 252);
+	height: 50%;
+	width: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-	-webkit-transition: background ease-in-out .5s;
-	-moz-transition: background ease-in-out .5s;
-	-o-transition: background ease-in-out .5s;
-	transition: background ease-in-out .5s;
+	transition: 1s;
 }
 
-
-.main-wrapper label:hover, 
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide2:checked ~ .controls label:nth-of-type(2),
-#slide3:checked ~ .controls label:nth-of-type(3),
-#slide4:checked ~ .controls label:nth-of-type(4) {
-	background: rgb(0, 0, 0);
+.wrapper-label:hover>div {
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(0, 0, 0);
 }
-
-.main-wrapper label:focus, 
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide2:checked ~ .controls label:nth-of-type(2),
-#slide3:checked ~ .controls label:nth-of-type(3),
-#slide4:checked ~ .controls label:nth-of-type(4) {
-	background-color: red;
-}
-
-
 
 .wrapper-label {
-	border: 0.18em solid rgb(0, 0, 0);
+	cursor: pointer;
 	display: flex;
-	height: 1.5em;
-	width: 1.5em;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
+	height: 2em;
+	width: 2em;
+	align-items: center;
+	justify-content: center;
 }
 
-.slides {
-   font-size: 1.4em;
+.wrapper-label:hover {
+	cursor: pointer;
 }
 
 @media (min-width: 768px) {
 }
 
 @media (max-width: 767px) {
-    html{
-      background-size: cover;
-    }
 
    .wrapper-controls {
       display: flex;
