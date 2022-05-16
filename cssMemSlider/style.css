@@ -9,15 +9,16 @@
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
-html {	background-image: url('./assets/img/background.jpg');
+html {
+
+	background-image: url('./assets/img/background.jpg');
    background-repeat: no-repeat;
    background-position: right;
    background-size: cover;
    height: 100%;
-   text-align: center;
    font-family: 'Oswald', sans-serif;
-   font-size: 1.2em;
-   color: aliceblue;}
+   color: aliceblue;
+}
 
 
 /*_header_*/
@@ -37,6 +38,7 @@ h1{
 
 
 .main-wrapper {
+   
 	height: 34.8em;
 	margin: 2% auto 0;
 	position: relative;
@@ -55,6 +57,7 @@ h1{
 }
 
 .slides {
+   overflow: hidden;
 	height: inherit;
    position: absolute;
 	opacity: 0;
@@ -120,6 +123,7 @@ h1{
 	margin: auto;
 	position: relative;
 	width: 100%;
+   background-color: rgb(252, 252, 252);
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
@@ -130,19 +134,30 @@ h1{
 	transition: background ease-in-out .5s;
 }
 
+
 .main-wrapper label:hover, 
 #slide1:checked ~ .controls label:nth-of-type(1),
 #slide2:checked ~ .controls label:nth-of-type(2),
 #slide3:checked ~ .controls label:nth-of-type(3),
 #slide4:checked ~ .controls label:nth-of-type(4) {
-	background: #ddd;
+	background: rgb(0, 0, 0);
 }
 
+.main-wrapper label:focus, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4) {
+	background-color: red;
+}
+
+
+
 .wrapper-label {
-	border: 0.12em solid #ddd;
+	border: 0.18em solid rgb(0, 0, 0);
 	display: flex;
-	height: 1em;
-	width: 1em;
+	height: 1.5em;
+	width: 1.5em;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
@@ -151,4 +166,26 @@ h1{
 
 .slides {
    font-size: 1.4em;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 767px) {
+    html{
+      background-size: cover;
+    }
+
+   .wrapper-controls {
+      display: flex;
+      flex-direction: column;
+   }
+   .controls {
+      margin: 0 auto;
+   }
+   .info {
+      padding-top: 4%;
+   }
+
+
 }
